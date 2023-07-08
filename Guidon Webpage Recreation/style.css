@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo&display=swap');
+*{
+    position: relative;
+    box-sizing: border-box;
+}
+div{
+    display: block;
+}
+html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: "Roboto", "Chivo", "Helvetica", sans-serif;
+    background-color: #0a0a0a;
+    color: white;
+}
+.backgroundWrapper{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #1C4480, #000);
+}
+.headerSection{
+    z-index: 100;
+}
+@media screen and (min-width: 0) and (max-width: 899px) {
+    .headerSection .headerBar{
+        display: flex;
+        flex-direction: column;
+        padding-top: 3em;
+        padding-bottom: 3em;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (min-width: 900px) {
+    .headerSection .headerBar{
+        display: flex;
+        padding: 3em;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.headerSection .headerBar .headerBarLeft .logo{
+    height: auto;
+    max-width: 25em;
+    width: 100%;
+}
+.headerBarRight{
+    display: flex;
+    justify-content: space-between;
+    max-width: 20em;
+    width: 100%;
+}
+.headerBarRight .navigation-link {
+    font-family: "Chivo", "Roboto", "Helvetica", sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 0.9em;
+    opacity: 0.75;
+    cursor: pointer;
+}
+.headerBarRight .navigation-link:hover{
+    opacity: 1;
+}
+.cardsWrapper{
+    width: 100%;
+    top: 7.5em;
+    left: 0;
+    position: absolute;
+    z-index: 100;
+}
+.cardsWrapper .centerWrapper{
+    width: 90%;
+    margin: auto;
+}
+.cardsWrapper .centerWrapper .interactivesWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 3em;
+}
+@media screen and (min-width: 0) and (max-width: 619px){
+    .interactivesWrapper .interactiveCard{
+        width: 100%;
+        transition: all 0.2s;
+        text-decoration: none;
+        flex-grow: 0;
+    }
+}
+@media screen and (min-width: 620px) and (max-width: 999px){
+    .interactivesWrapper .interactiveCard{
+        width: calc(50% - 10px);
+        transition: all 0.2s;
+        text-decoration: none;
+        flex-grow: 0;
+    }
+}
+@media screen and (min-width: 1000px) and (max-width: 1469px){
+    .interactivesWrapper .interactiveCard{
+        width: calc(33.33% - 13.33px);
+        transition: all 0.2s;
+        text-decoration: none;
+        flex-grow: 0;
+    }
+}
+@media screen and (min-width: 1470px){
+    .interactivesWrapper .interactiveCard{
+        width: calc(25% - 15px);
+        transition: all 0.2s;
+        text-decoration: none;
+        flex-grow: 0;
+    }
+}
+.interactiveCard .thumbnail{
+    width: 100%;
+    height: 150px;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
+    background-color: #1e1e1e;
+}
+@media screen and (min-width: 0) and (max-width: 619px){
+    .interactiveCard .thumbnail{
+        height: 200px;
+    }
+}
+.interactiveCard a{
+    text-decoration: none;
+}
+.titleWrapper{
+    white-space: nowrap;
+    color: white;
+    text-align: center;
+}
+.titleWrapper .title{
+    width: 80%;
+    max-width: 80%;
+    opacity: 0.5;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 2.5em;
+    font-size: 0.9em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.titleWrapper:hover .title{
+    opacity: 1;
+}
